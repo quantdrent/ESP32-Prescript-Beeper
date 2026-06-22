@@ -4,6 +4,9 @@
 
 > A physical device aiming to recreate the pager device rien used to recive prescripts in canto IX, with wifi feature to send live prescripts
 
+this project wouldnt be possible without Kritzkingvoid Prescript web project
+https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
+
 ## Required Materials
 * **MCU**    : ESP32 C3
 * **SCREEN** : 0.91 OLED Screen
