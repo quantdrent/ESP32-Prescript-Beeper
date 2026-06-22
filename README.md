@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-> A physical device aiming to recreate the pager device rien used to recive prescripts in canto IX, with wifi feature to send live prescripts
+> A physical device aiming to recreate the pager device rien used to recive prescripts in canto IX.
 
 this project wouldnt be possible without Kritzkingvoid Prescript web project
 https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
