@@ -8,8 +8,14 @@
 * **MCU**    : ESP32 C3
 * **SCREEN** : 0.91 OLED Screen
 * **INPUT**  : 2x Touch capacitive switches (Standard micro switches work but case needs to be tweaked)
-> Below are optional -
-* **AUDIO**  : DF Player Mini & small speaker
+* **AUDIO**  : DF Player Mini & small speaker (optional)
+
+## Required Libraries
+
+- `Adafruit GFX Library`
+- `Adafruit SSD1306`
+- `wifi`
+- `WebServer`
 
 ## Instructions
 1. Print the case
@@ -18,4 +24,4 @@
 4. ill write the rest later
 
 ## Pictures
-
+n/a
