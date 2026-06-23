@@ -2,16 +2,20 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-> A physical device aiming to recreate the pager device rien used to recive prescripts in canto IX.
+A physical device aiming to recreate the pager/beeper device rien used to recive prescript.
+Feel free to do anything about this project but please give credits/attributions
 
-this project wouldnt be possible without Kritzkingvoid Prescript web project
-https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
+> This version is made for a 1.3 inch **(4 pins)** oled screen you will need to tweak the enclosure and the code if you wish to use other versions of the screen
+
+## Pictures
+not yet
 
 ## Required Materials
 * **MCU**    : ESP32 C3
-* **SCREEN** : 0.91 OLED Screen
+* **SCREEN** : 1.3 inch OLED Screen **(4 pins ver.)**
 * **INPUT**  : 2x Touch capacitive switches (Standard micro switches work but case needs to be tweaked)
 * **AUDIO**  : DF Player Mini & small speaker (optional)
+3D files have been provided for the case of the beeper
 
 ## Required Libraries
 
@@ -21,10 +25,12 @@ https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Pres
 - `WebServer`
 
 ## Instructions
-1. Print the case
-2. dump the code with arduino ide
-3. assemble
-4. ill write the rest later
+1. Click the code button and click download ZIP
+2. unzip and open the .ino file
+3. upload code to esp32 c3
+4. wire it just like the schematic in pictures folder
+5. load up ur micro sd card and drag scramble.mp3 and prescript.txt (this is some premade prescript where u can get randomly by pressing both buttons at the same time) into the sd card
+6. assemble everything and there you go! go to the wild and larp as the black silence
 
-## Pictures
-n/a
+this project wouldnt be possible without Kritzkingvoid Prescript web project
+https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
