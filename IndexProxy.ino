@@ -94,31 +94,73 @@ function sendData(){
 void drawCenteredText(String text) {
 
   display.clearDisplay();
-
-  display.setTextSize(2);
   display.setTextColor(SH110X_WHITE);
+  display.setTextSize(1);
 
-  int16_t x1, y1;
-  uint16_t w, h;
+  const int maxCharsPerLine = 21;
 
-  display.getTextBounds(text, 0, 0, &x1, &y1, &w, &h);
+  String lines[5];
+  int lineCount = 0;
 
-  int x = (SCREEN_WIDTH - w) / 2;
-  int y = (SCREEN_HEIGHT - h) / 2;
+  while (text.length() > 0 && lineCount < 5) {
 
-  if (x < 0) x = 0;
+    if (text.length() <= maxCharsPerLine) {
+      lines[lineCount++] = text;
+      break;
+    }
 
-  display.setCursor(x, y);
-  display.print(text);
+    int splitPos = maxCharsPerLine;
+
+    while (splitPos > 0 && text[splitPos] != ' ') {
+      splitPos--;
+    }
+
+    if (splitPos == 0) {
+      splitPos = maxCharsPerLine;
+    }
+
+    lines[lineCount++] = text.substring(0, splitPos);
+
+    text = text.substring(splitPos);
+    text.trim();
+  }
+
+  int lineHeight = 10;
+  int totalHeight = lineCount * lineHeight;
+  int startY = (SCREEN_HEIGHT - totalHeight) / 2;
+
+  for (int i = 0; i < lineCount; i++) {
+
+    int16_t x1, y1;
+    uint16_t w, h;
+
+    display.getTextBounds(
+      lines[i],
+      0,
+      0,
+      &x1,
+      &y1,
+      &w,
+      &h
+    );
+
+    int x = (SCREEN_WIDTH - w) / 2;
+
+    display.setCursor(x, startY + (i * lineHeight));
+    display.print(lines[i]);
+  }
 
   display.display();
 }
 
 void showMessage(String text) {
 
+  // Add futuristic delimiters
+  text = "_" + text + "_";
+
   int len = text.length();
 
-  // Scramble animation
+  // Full scramble phase
   for (int frame = 0; frame < 25; frame++) {
 
     String out = "";
@@ -132,7 +174,7 @@ void showMessage(String text) {
     delay(40);
   }
 
-  // Reveal animation
+  // Reveal phase
   for (int reveal = 0; reveal <= len; reveal++) {
 
     String out = "";
@@ -176,17 +218,18 @@ void handleSend() {
 
 void setup() {
 
-  Wire.begin(3, 4);   // SDA=3, SCL=4 (ESP32-C3)
+  Wire.begin(3, 4); // SDA=3 SCL=4
 
   randomSeed(micros());
 
-  // SH1106 initialization
-  display.begin(0x3C, true);
+  if (!display.begin(0x3C, true)) {
+    while (1);
+  }
 
   display.clearDisplay();
-  display.setTextColor(SH110X_WHITE);
+  display.display();
 
-  drawCenteredText("Standby");
+  drawCenteredText("_STANDBY_");
 
   WiFi.mode(WIFI_AP);
   WiFi.softAP("LarpMachine");
