@@ -12,7 +12,7 @@ not yet
 
 ## Required Materials
 * **MCU**    : ESP32 C3
-* **SCREEN** : 1.3 inch OLED Screen **(4 pins ver.)**
+* **SCREEN** : 1.3 Inch oled screen SH110X
 * **INPUT**  : 2x Touch capacitive switches (Standard micro switches work but case needs to be tweaked)
 * **AUDIO**  : DF Player Mini & small speaker (optional)
 3D files have been provided for the case of the beeper
@@ -20,7 +20,7 @@ not yet
 ## Required Libraries
 
 - `Adafruit GFX Library`
-- `Adafruit SSD1306`
+- `Adafruit SH110X`
 - `wifi`
 - `WebServer`
 
