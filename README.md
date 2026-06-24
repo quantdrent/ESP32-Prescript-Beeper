@@ -29,8 +29,8 @@ not yet
 
 ## Instructions
 1. Click the code button and click download ZIP
-2. unzip and open the .ino file
-3. upload code to esp32 c3
+2. unzip and open the IndexDevice Folder
+3. Open .ino file and upload it to esp32 c3
 4. wire it just like the schematic in pictures folder
 5. load up ur micro sd card and put scramble.mp3 to the sd card
 6. assemble everything and there you go! go to the wild and larp as the black silence
