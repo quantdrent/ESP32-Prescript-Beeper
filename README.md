@@ -5,7 +5,7 @@
 A physical device aiming to recreate the pager/beeper device rien used to recive prescript.
 Feel free to do anything about this project but please give credits/attributions and if you want to feel free to tag me if u make it lol @quantdrent on tiktok
 
-> This version is made for a 1.3 inch **(4 pins)** oled screen you will need to tweak the enclosure and the code if you wish to use other versions of the screen
+>  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
 
 ## Pictures
 not yet
