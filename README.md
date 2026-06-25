@@ -11,10 +11,11 @@ Feel free to do anything about this project but please give credits/attributions
 not yet
 
 ## Required Materials
-* **MCU**    : ESP32 C3
-* **SCREEN** : 1.3 Inch oled screen SH110X
-* **INPUT**  : 2x Touch capacitive switches (Standard micro switches work but case needs to be tweaked)
-* **AUDIO**  : DF Player Mini & small speaker (optional)
+* ESP32C3 Super Mini [[AliExpress](https://www.aliexpress.com/item/1005007941259180.html)]
+* 1.3 Inch OLED Screen SH1106 [[AliExpress](https://www.aliexpress.com/item/1005006862867338.html)]
+* 2x Touch capacitive switches TTP-223 [[AliExpress](https://www.aliexpress.com/item/32964219843.html)]
+* DF Player Mini [[AliExpress](https://www.aliexpress.com/item/1005006166800318.html)]
+* Any small speakers that can connnect to the DF Player
 
 `note: you need a sd card for mp3 audio`
 
