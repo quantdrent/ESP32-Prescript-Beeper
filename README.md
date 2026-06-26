@@ -8,10 +8,6 @@ Feel free to do anything about this project but please give credits/attributions
 
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
 
-## Pictures
-wip.
-![alt text](https://raw.githubusercontent.com/quantdrent/ESP32-Prescript-Beeper/refs/heads/main/Images/wiring.png)
-
 ## TODO lIST
 >  I recommend not starting on anything here until most stuff are finished
 
@@ -31,7 +27,7 @@ wip.
 
 `note: you need a sd card for mp3 audio`
 
-print beepercase.stl with 0.16 with 70% infill for the case and 25% for the lid or just use the beepercase.3mf file
+I recommend using the 3MF file for printing, The results i got were by using a bambulab A1.
 
 ## Required Libraries
 
@@ -42,11 +38,15 @@ print beepercase.stl with 0.16 with 70% infill for the case and 25% for the lid 
 
 ## Instructions
 1. Click the code button and click download ZIP
-2. unzip and open the IndexDevice Folder
-3. Open .ino file and upload it to esp32 c3
-4. wire it just like the schematic in pictures folder
-5. load up ur micro sd card and put scramble.mp3 to the sd card
-6. assemble everything and there you go! go to the wild and larp as the black silence
+2. Unzip and open .ino file and upload it to esp32 c3
+3. Wire it just like the schematic in pictures folder
+4. Transfer all audio from audio folder to a sd card and hook it up to the DF Player
+6. Assemble everything and there you go!
+7. Larp as roland
+
+## Images
+wip.
+![alt text](https://raw.githubusercontent.com/quantdrent/ESP32-Prescript-Beeper/refs/heads/main/Images/wiring.png)
 
 this project wouldnt be possible without Kritzkingvoid Prescript web project
 https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
