@@ -1,5 +1,6 @@
 # ESP32-The-Index-Prescript
 
+### NOTE THIS PROJECT IS STILL UNFINISHED! 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 A physical device aiming to recreate the pager/beeper device rien used to recive prescript.
