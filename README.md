@@ -7,7 +7,7 @@ A physical device aiming to recreate the pager/beeper device rien used to recive
 Feel free to do anything about this project but please give credits/attributions and if you want to feel free to tag me if u make it lol @quantdrent on tiktok
 
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
-
+>  and some knowledge of programming a arduino/esp and soldering is needed.
 ## TODO lIST
 >  I recommend not starting on anything here until most stuff are finished
 
@@ -24,10 +24,12 @@ Feel free to do anything about this project but please give credits/attributions
 * 2x Touch capacitive switches TTP-223 [[AliExpress](https://www.aliexpress.com/item/32964219843.html)]
 * DF Player Mini [[AliExpress](https://www.aliexpress.com/item/1005006166800318.html)]
 * Any small speakers that can connnect to the DF Player
+* Micro SD card
+* AWG 26 wires
 
-`note: you need a sd card for mp3 audio`
+>  You need a soldering iron, solder, and maybe some flux to connect them all.
 
-I recommend using the 3MF file for printing, The results i got were by using a bambulab A1.
+I recommend using the 3MF file for printing, The results i got were by using a bambulab A1 0.4 nozzle with SUNLU pla+ 2.0.
 
 ## Required Libraries
 
@@ -48,5 +50,8 @@ I recommend using the 3MF file for printing, The results i got were by using a b
 wip.
 ![alt text](https://raw.githubusercontent.com/quantdrent/ESP32-Prescript-Beeper/refs/heads/main/Images/wiring.png)
 
-this project wouldnt be possible without Kritzkingvoid Prescript web project
-https://github.com/Kritzkingvoid/Prescripts https://kritzkingvoid.github.io/Prescripts/
+this project was inspired by Kritzkingvoid Prescript web project
+
+https://kritzkingvoid.github.io/Prescripts/
+
+SFX are from project moon for limbus company.
