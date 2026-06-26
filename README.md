@@ -9,7 +9,18 @@ Feel free to do anything about this project but please give credits/attributions
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
 
 ## Pictures
-not yet
+wip.
+![alt text](https://raw.githubusercontent.com/quantdrent/ESP32-Prescript-Beeper/refs/heads/main/Images/wiring.png)
+
+## TODO lIST
+>  I recommend not starting on anything here until most stuff are finished
+
+- [x] Beeper/Pager case
+- [x] Drawn Schematics
+- [x] Prescript send via wifi
+- [ ] Preloaded prescripts
+- [ ] save preloaded prescripts via wifi send
+- [ ] idk
 
 ## Required Materials
 * ESP32C3 Super Mini [[AliExpress](https://www.aliexpress.com/item/1005007941259180.html)]
