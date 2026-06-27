@@ -44,7 +44,8 @@ I recommend using the 3MF file for printing, The results i got were by using a b
 3. Wire it just like the schematic in pictures folder
 4. Transfer all audio from audio folder to a sd card and hook it up to the DF Player
 6. Assemble everything and there you go!
-7. Larp as roland
+
+If you want to send prescript via wifi connect to the wifi larpmachine from ur phone/laptop/pc and type http://192.168.4.1/ on ur browser.
 
 ## Images
 wip.
