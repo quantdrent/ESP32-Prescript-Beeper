@@ -14,9 +14,9 @@ Feel free to do anything about this project but please give credits/attributions
 - [x] Beeper/Pager case
 - [x] Drawn Schematics
 - [x] Prescript send via wifi
-- [ ] Preloaded prescripts
-- [ ] save preloaded prescripts via wifi send
-- [ ] idk
+- [X] Preloaded prescripts
+- [X] save preloaded prescripts via wifi send
+- [ ] Rework the case to make it easier to assemble 
 
 ## Required Materials
 * ESP32C3 Super Mini [[AliExpress](https://www.aliexpress.com/item/1005007941259180.html)]
