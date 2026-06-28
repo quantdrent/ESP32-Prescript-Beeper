@@ -9,7 +9,7 @@
 #include "WebUi.h"
 
 const int PASS_BUTTON_PIN = 6;
-const int FAIL_BUTTON_PIN = 8;
+const int FAIL_BUTTON_PIN = 10;
 
 const unsigned long DEFAULT_MESSAGE_MS = 5000;
 const unsigned long RESULT_MESSAGE_MS = 2500;

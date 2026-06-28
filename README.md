@@ -1,35 +1,35 @@
 # ESP32-The-Index-Prescript
 
-### NOTE THIS PROJECT IS STILL UNFINISHED! 
+### NOTE THIS PROJECT MAY HAVE BUGS! 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-A physical device aiming to recreate the pager/beeper device rien used to recive prescript.
-Feel free to do anything about this project but please give credits/attributions and if you want to feel free to tag me if u make it lol @quantdrent on tiktok
+A physical device aiming to recreate the pager/beeper device rien used to recive prescript from limbus company canto 9.
+
+The main goal for this project was to make a budget index proxy / rien device. This project is under the MIT license so you are free to do anything with this project (this includes selling these stuff) but dont try to gatekeep lol and also if you decided to make this feel free to show me lol i wana see it.
 
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
->  and some knowledge of programming a arduino/esp and soldering is needed.
+
+>  **some knowledge of programming a arduino/esp and soldering is needed.**
 ## TODO lIST
->  I recommend not starting on anything here until most stuff are finished
 
 - [x] Beeper/Pager case
 - [x] Drawn Schematics
 - [x] Prescript send via wifi
 - [X] Preloaded prescripts
 - [X] save preloaded prescripts via wifi send
-- [ ] Rework the case to make it easier to assemble 
+- [ ] Rework the case to make it easier to assemble (maybe)
 
 ## Required Materials
 * ESP32C3 Super Mini [[AliExpress](https://www.aliexpress.com/item/1005007941259180.html)]
 * 1.3 Inch OLED Screen SH1106 [[AliExpress](https://www.aliexpress.com/item/1005006862867338.html)]
 * 2x Touch capacitive switches TTP-223 [[AliExpress](https://www.aliexpress.com/item/32964219843.html)]
-* DF Player Mini [[AliExpress](https://www.aliexpress.com/item/1005006166800318.html)]
-* Any small speakers that can connnect to the DF Player
-* Micro SD card
 * AWG 26 wires
 
 >  You need a soldering iron, solder, and maybe some flux to connect them all.
 
 I recommend using the 3MF file for printing, The results i got were by using a bambulab A1 0.4 nozzle with SUNLU pla+ 2.0.
+
+(this is basically less than 8 bucks bro)
 
 ## Required Libraries
 
@@ -39,13 +39,13 @@ I recommend using the 3MF file for printing, The results i got were by using a b
 `lookk at .ino for the full required libraries.`
 
 ## Instructions
-1. Click the code button and click download ZIP
-2. Unzip and open .ino file and upload it to esp32 c3
-3. Wire it just like the schematic in pictures folder
-4. Transfer all audio from audio folder to a sd card and hook it up to the DF Player
-6. Assemble everything and there you go!
-
-If you want to send prescript via wifi connect to the wifi larpmachine from ur phone/laptop/pc and type http://192.168.4.1/ on ur browser.
+1. CLick the code button and download zip. 
+2. Solder the components like the provided schematics inside the images folder or scroll down. (you need to desolder the 1.3 oled screen goodluck)
+3. Open the IndexProxy folder and open  the IndexProxy.ino
+4. you can edit the prescripts.h to add more preloaded prescripts or check step 7
+5. Connect your esp32c3 and upload the code
+6. check if everything works and put everything in the case
+7. Connect your device (Phone/Laptop/Tablet) to the wifi **'LarpMachine'** or what ever you named it and open your browser and open **http://192.168.4.1/** and there should be a gui to send live prescripts or add more saved prescripts
 
 ## Images
 wip.
@@ -54,5 +54,3 @@ wip.
 this project was inspired by Kritzkingvoid Prescript web project
 
 https://kritzkingvoid.github.io/Prescripts/
-
-SFX are from project moon for limbus company.
