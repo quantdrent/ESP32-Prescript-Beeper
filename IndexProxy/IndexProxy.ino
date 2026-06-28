@@ -577,7 +577,6 @@ void setup() {
   showBootStandbyText();
 
   WiFi.mode(WIFI_AP);
-  WiFi.onEvent(handleWiFiEvent);
   WiFi.softAP("LarpMachine");
 
   server.on("/", handleRoot);
