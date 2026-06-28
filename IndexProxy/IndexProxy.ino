@@ -382,7 +382,7 @@ void showResultText(bool passed) {
   presetAwaitingDecision = false;
   activePresetIndex = -1;
   presetDecisionDeadline = 0;
-  showScrambledText(passed ? "CLEAR." : "FAILED.", RESULT_MESSAGE_MS, false);
+  showScrambledText(passed ? "_CLEAR._" : "_FAILED._", RESULT_MESSAGE_MS, false);
 }
 
 void startDecisionText(String text, uint32_t durationMs, bool decorate) {
@@ -523,22 +523,23 @@ void handleButtons() {
   bool failPressed = digitalRead(FAIL_BUTTON_PIN) == LOW;
 
   if (presetAwaitingDecision) {
-    if (passPressed && !failPressed && !lastPassPressed) {
+    if (passPressed && !lastPassPressed) {
       showResultText(true);
-    } else if (failPressed && !passPressed && !lastFailPressed) {
+    } else if (failPressed && !lastFailPressed) {
       showResultText(false);
     }
-  } else if (passPressed && failPressed) {
-    if (bothButtonsStart == 0) {
-      bothButtonsStart = millis();
-    } else if (!comboTriggered && (millis() - bothButtonsStart >= BUTTON_HOLD_MS)) {
-      comboTriggered = true;
-      triggerRandomPrescript();
-    }
-  } else {
-    bothButtonsStart = 0;
-
-    if (!passPressed && !failPressed) {
+  }
+  else {
+    if (passPressed) {
+      if (bothButtonsStart == 0) {
+        bothButtonsStart = millis();
+      } else if (!comboTriggered &&
+                 (millis() - bothButtonsStart >= BUTTON_HOLD_MS)) {
+        comboTriggered = true;
+        triggerRandomPrescript();
+      }
+    } else {
+      bothButtonsStart = 0;
       comboTriggered = false;
     }
   }
