@@ -3,21 +3,13 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SH110X.h>
-#include <DFRobotDFPlayerMini.h>
 #include <Preferences.h>
 #include "SplashLogo.h"
 #include "Prescripts.h"
 #include "WebUi.h"
 
-const int DFPLAYER_RX_PIN = 10;        // RX
-const int DFPLAYER_TX_PIN = 5;         // TX
 const int PASS_BUTTON_PIN = 6;
 const int FAIL_BUTTON_PIN = 7;
-
-const int DFPLAYER_VOLUME = 30;        // 0-30
-const int INCOMING_TRACK = 1;          // /MP3/0001.mp3
-const int TYPING_TRACK = 2;            // /MP3/0002.mp3
-const int CONNECT_TRACK = 3;           // /MP3/0003.mp3
 
 const unsigned long DEFAULT_MESSAGE_MS = 5000;
 const unsigned long RESULT_MESSAGE_MS = 2500;
@@ -32,10 +24,8 @@ const int MAX_CUSTOM_PRESCRIPTS = 20;
 Adafruit_SH1106G display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 WebServer server(80);
 HardwareSerial dfSerial(1);
-DFRobotDFPlayerMini dfPlayer;
 Preferences prefs;
 
-bool dfPlayerReady = false;
 unsigned long oledTimeout = 0;
 bool oledActive = false;
 bool presetAwaitingDecision = false;
@@ -237,11 +227,6 @@ void drawBitmapSlice(
   }
 }
 
-void playTrack(int trackNumber) {
-  if (!dfPlayerReady) return;
-  dfPlayer.play(trackNumber);
-}
-
 void drawCenteredText(String text) {
   display.clearDisplay();
   display.setTextColor(SH110X_WHITE);
@@ -301,8 +286,6 @@ void showScrambledText(String text, uint32_t holdMs, bool decorate) {
 
   int len = text.length();
 
-  playTrack(INCOMING_TRACK);
-
   for (int frame = 0; frame < 25; frame++) {
     String out = "";
 
@@ -326,7 +309,6 @@ void showScrambledText(String text, uint32_t holdMs, bool decorate) {
     }
 
     drawCenteredText(out);
-    playTrack(TYPING_TRACK);
     delay(50);
   }
 
@@ -425,12 +407,6 @@ void triggerRandomPrescript() {
   }
 
   startDecisionText(text, durationMs, false);
-}
-
-void handleWiFiEvent(WiFiEvent_t event) {
-  if (event == ARDUINO_EVENT_WIFI_AP_STACONNECTED) {
-    playTrack(CONNECT_TRACK);
-  }
 }
 
 void sendApiResponse(int statusCode, const String &body) {
@@ -596,21 +572,6 @@ void setup() {
   display.setRotation(2);
   display.clearDisplay();
   display.display();
-
-  dfSerial.begin(9600, SERIAL_8N1, DFPLAYER_RX_PIN, DFPLAYER_TX_PIN);
-  delay(500);
-
-  Serial.println("Initializing DFPlayer...");
-  dfPlayer.setTimeOut(500);
-
-  if (dfPlayer.begin(dfSerial, false, true)) {
-    Serial.println("DFPlayer OK");
-    dfPlayerReady = true;
-    dfPlayer.volume(DFPLAYER_VOLUME);
-  } else {
-    Serial.println("DFPlayer NOT FOUND - continuing without audio");
-    dfPlayerReady = false;
-  }
 
   showStartupLogo();
   showBootStandbyText();
