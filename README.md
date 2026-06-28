@@ -5,7 +5,7 @@
 
 A physical device aiming to recreate the pager/beeper device rien used to recive prescript from limbus company canto 9.
 
-The main goal for this project was to make a budget index proxy / rien device. This project is under the MIT license so you are free to do anything with this project (this includes selling these stuff) but dont try to gatekeep lol and also if you decided to make this feel free to show me lol i wana see it.
+The main goal for this project was to make a budget index proxy / rien device. This project is under the MIT license so you are free to do anything with this project (this includes selling these stuff) but dont try to gatekeep lol and also if you decided to make this feel free to show me lol i wana see it. @quantdrent on TikTok, Twitter, and Discord.
 
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
 
