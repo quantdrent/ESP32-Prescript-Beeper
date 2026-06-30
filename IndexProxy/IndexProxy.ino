@@ -8,14 +8,21 @@
 #include "Prescripts.h"
 #include "WebUi.h"
 
+//i recommend desoldering the oled pins so you can wire ur own
+//and also rotate it 180 degrees so that it can fit nicely
+//if you dont want to follow it then just delete display.setRotation(2);
+
+const char *name = "IndexDevice"; //change to anything
+const char *pass = "PASSWORD"; //change to anything
+
 const int PASS_BUTTON_PIN = 6;
 const int FAIL_BUTTON_PIN = 10;
 
 const unsigned long DEFAULT_MESSAGE_MS = 5000;
 const unsigned long RESULT_MESSAGE_MS = 2500;
 const unsigned long BUTTON_HOLD_MS = 700;
-const uint32_t MIN_DURATION_MS = 500;
-const uint32_t MAX_DURATION_MS = 60000;
+const uint32_t MIN_DURATION_MS = 2000;
+const uint32_t MAX_DURATION_MS = 30000;
 const int MAX_CUSTOM_PRESCRIPTS = 20;
 
 #define SCREEN_WIDTH 128
@@ -565,9 +572,6 @@ void setup() {
 
   if (!display.begin(0x3C, true)) {
     Serial.println("OLED FAILED");
-    while (1) {
-      delay(100);
-    }
   }
 
   display.setRotation(2);
@@ -578,7 +582,7 @@ void setup() {
   showBootStandbyText();
 
   WiFi.mode(WIFI_AP);
-  WiFi.softAP("LarpMachine");
+  WiFi.softAP(name, pass);
 
   server.on("/", handleRoot);
   server.on("/send", handleSend);
