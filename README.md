@@ -1,5 +1,8 @@
 # ESP32-The-Index-Prescript
 
+### DISCONTINUED CHECK [THIS](https://github.com/quantdrent/Rien-Prescript-Beeper) INSTEAD
+https://github.com/quantdrent/Rien-Prescript-Beeper
+
 ### NOTE THIS PROJECT MAY HAVE BUGS! 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
