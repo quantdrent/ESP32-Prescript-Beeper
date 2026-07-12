@@ -1,6 +1,6 @@
 # ESP32-The-Index-Prescript
 
-### DISCONTINUED CHECK [THIS](https://github.com/quantdrent/Rien-Prescript-Beeper) INSTEAD
+### CHECK [THIS](https://github.com/quantdrent/Rien-Prescript-Beeper) FOR UPDATES
 https://github.com/quantdrent/Rien-Prescript-Beeper
 
 ### NOTE THIS PROJECT MAY HAVE BUGS! 
@@ -13,14 +13,6 @@ The main goal for this project was to make a budget index proxy / rien device. T
 >  this is my 3rd ever arduino project please bare with my okay ish code, if you want to fork and make a better one feel free!
 
 >  **some knowledge of programming a arduino/esp and soldering is needed.**
-## TODO lIST
-
-- [x] Beeper/Pager case
-- [x] Drawn Schematics
-- [x] Prescript send via wifi
-- [X] Preloaded prescripts
-- [X] save preloaded prescripts via wifi send
-- [ ] Rework the case to make it easier to assemble (maybe)
 
 ## Required Materials
 * ESP32C3 Super Mini [[AliExpress](https://www.aliexpress.com/item/1005007941259180.html)]
@@ -44,11 +36,9 @@ I recommend using the 3MF file for printing, The results i got were by using a b
 ## Instructions
 1. CLick the code button and download zip. 
 2. Solder the components like the provided schematics inside the images folder or scroll down. (you need to desolder the 1.3 oled screen goodluck)
-3. Open the IndexProxy folder and open  the IndexProxy.ino
-4. you can edit the prescripts.h to add more preloaded prescripts or check step 7
-5. Connect your esp32c3 and upload the code
-6. check if everything works and put everything in the case
-7. Connect your device (Phone/Laptop/Tablet) to the wifi **'LarpMachine'** or what ever you named it and open your browser and open **http://192.168.4.1/** and there should be a gui to send live prescripts or add more saved prescripts
+3. Open the folder and locate the .ino file and upload the firmware
+4. Open https://quantdrent.github.io/Rien-Prescript-Beeper/ on a browser that supports web ble
+5. Click pair and everything should work now
 
 ## Images
 wip.
